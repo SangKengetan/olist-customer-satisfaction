@@ -1,0 +1,13 @@
+UJI STATISTIK (dihitung oleh src/run_analysis.py)
+
+A. Skor review: order terlambat vs tepat waktu (ruang lingkup pengiriman)
+   n terlambat = 7,658 | n tepat waktu = 87,979
+   rata-rata skor: terlambat 2.565 vs tepat waktu 4.294 (selisih -1.730)
+   Mann-Whitney U (dua sisi): p < 1e-300 (di bawah batas ketelitian komputer)
+   Welch t-test: t = -89.4, p < 1e-300 (di bawah batas ketelitian komputer)
+   Ukuran efek: Cohen's d = -1.45 | |rank-biserial| = 0.55 (efek besar bila > 0,5; skor terlambat lebih rendah)
+   Catatan: dengan n sebesar ini p-value hampir pasti sangat kecil. Yang menentukan makna adalah ukuran efek.
+
+B. Pembelian ulang vs skor review order pertama (uji chi-kuadrat independensi)
+   chi2 = 9.17, dof = 4, p = 0.0571
+   pct repeat per skor: 1: 2.96%, 2: 2.68%, 3: 2.99%, 4: 2.77%, 5: 3.16%

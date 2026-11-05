@@ -1,0 +1,4 @@
+definisi_order,total_pelanggan,pelanggan_repeat,pct_repeat,maks_order_per_pelanggan
+A. semua order,96096,2997,3.12,17
+B. order valid (utama),94990,2888,3.04,16
+C. hanya delivered,93358,2801,3.0,15

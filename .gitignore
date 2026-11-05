@@ -1,0 +1,29 @@
+# --- Data (besar & hak cipta dataset di Kaggle; jangan di-commit) ---
+data/*
+!data/README.md
+
+# Database DuckDB hasil load_data.py
+*.duckdb
+*.duckdb.wal
+
+# --- Virtual environment ---
+.venv*/
+venv/
+
+# --- Python ---
+__pycache__/
+*.pyc
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Rahasia / kredensial ---
+.env
+kaggle.json
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
