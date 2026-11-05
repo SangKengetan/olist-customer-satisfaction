@@ -2,6 +2,9 @@
 data/*
 !data/README.md
 
+# Hasil ekspor untuk dashboard (turunan dataset Kaggle)
+exports/
+
 # Database DuckDB hasil load_data.py
 *.duckdb
 *.duckdb.wal

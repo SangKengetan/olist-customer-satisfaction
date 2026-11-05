@@ -18,6 +18,8 @@ Analisis kepuasan pelanggan dan kinerja bisnis pada
 
 Laporan lengkap dengan grafik, rekomendasi, dan keterbatasan: **[reports/laporan_temuan.md](reports/laporan_temuan.md)**
 
+Dashboard interaktif (Looker Studio): _tautan menyusul_. Cara membuatnya: [docs/panduan_looker_studio.md](docs/panduan_looker_studio.md). Versi Power BI: [docs/panduan_power_bi.md](docs/panduan_power_bi.md)
+
 ## Pertanyaan bisnis yang dijawab
 
 | # | Pertanyaan | Query | Grafik |
@@ -41,9 +43,10 @@ Laporan lengkap dengan grafik, rekomendasi, dan keterbatasan: **[reports/laporan
 ```
 data/           CSV mentah (tidak di-commit, lihat data/README.md)
 sql/            01 profiling | 02 relasi | 03 deteksi masalah | 04 tabel bersih | 05 analisis bisnis
-src/            run_sql.py | build_clean.py | run_analysis.py
+src/            run_sql.py | build_clean.py | run_analysis.py | export_for_looker.py
 reports/        laporan_temuan.md | tables/ (CSV hasil) | figures/ (grafik)
-docs/           data_cleaning_log.md
+docs/           data_cleaning_log.md | panduan_looker_studio.md | panduan_power_bi.md
+exports/        CSV untuk Looker Studio (tidak di-commit)
 load_data.py    memuat CSV ke olist.duckdb
 ```
 
@@ -59,6 +62,7 @@ pip install -r requirements.txt
 python load_data.py                 # CSV -> olist.duckdb
 python src/build_clean.py           # membuat tabel clean_*
 python src/run_analysis.py          # hasil query, grafik, uji statistik -> reports/
+python src/export_for_looker.py     # (opsional) CSV untuk dashboard Looker Studio
 ```
 
 Query bisa dijalankan sendiri: `python src/run_sql.py sql/05_analisis_bisnis.sql`
